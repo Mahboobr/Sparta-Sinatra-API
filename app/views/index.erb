@@ -16,5 +16,15 @@
       <td> Ranking: <%= array["ranking"] %> </td>
     <% end %>
   </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Score: <%= array["totalVotesScore"] %> </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Votes: <%= array["entityVotesSummary"]["totalVotesSum"] %> </td>
+    <% end %>
+  </tr>
 
 </table>

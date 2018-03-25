@@ -47,7 +47,3 @@ class MemeService
   end
 
 end
-
-
-# x = MemeService.new
-# puts x.json_response["result"][0]["displayName"]
