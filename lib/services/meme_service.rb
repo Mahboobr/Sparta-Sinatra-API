@@ -18,10 +18,36 @@ class MemeService
     # json_response["success"]
     @json_file["success"]
   end
+  def test_elasped_time
+    @json_file["elapsedMS"]
+  end
+  def test_result
+    @json_file["result"]
+  end
   def test_generatorID
     @json_file["result"][0]["generatorID"]
   end
+  def test_display_name
+    @json_file["result"][0]["displayName"]
+  end
+  def test_url_name
+    @json_file["result"][0]["urlName"]
+  end
+  def test_total_votes
+    @json_file["result"][0]["totalVotesScore"]
+  end
+  def test_entity_id
+    @json_file["result"][0]["entityVotesSummary"]["entityID"]
+  end
+  def test_user_id
+    @json_file["result"][0]["entityVotesSummary"]["userID"]
+  end
+  def test_result_hash
+    @json_file["result"][0]
+  end
+
 end
+
+
 # x = MemeService.new
-# puts x.json_response["result"][0]["generatorID"]
-# puts x.test_success
+# puts x.json_response["result"][0]["displayName"]

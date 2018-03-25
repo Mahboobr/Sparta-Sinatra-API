@@ -16,11 +16,11 @@ class AppController < Sinatra::Base
 
   # Landing Page
   get '/' do
-    @title = "Posts Show Page"
+    @title = "Memes Show Page"
 
-    $posts = MemeAPI.new.meme_service.json_response
+    $memes = MemeAPI.new.meme_service.json_response
 
-    @posts = $posts
+    @memes = $memes
 
     erb :'/index'
   end

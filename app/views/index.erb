@@ -1,16 +1,20 @@
 <h1>Memes</h1>
 
-<!-- # <% @posts["result"].each do |array| %>
-#   <h3><%= array["displayName"] %></h3>
-# <% end %> -->
-
 <table>
   <tr>
-    <% @posts["result"].each do |array| %>
+    <% @memes["result"].each do |array| %>
       <th><%= array["displayName"] %></th>
     <% end %>
   </tr>
-  <% @posts["result"].each do |array| %>
-    <td> <img src="<%= array["imageUrl"] %>" alt=""> </td>
-  <% end %>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> <img src="<%= array["imageUrl"] %>" alt=""> </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Ranking: <%= array["ranking"] %> </td>
+    <% end %>
+  </tr>
+
 </table>
