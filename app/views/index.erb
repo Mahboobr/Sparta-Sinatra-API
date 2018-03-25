@@ -1,0 +1,30 @@
+<h1>Memes</h1>
+
+<table>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <th><%= array["displayName"] %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> <img src="<%= array["imageUrl"] %>" alt=""> </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Ranking: <%= array["ranking"] %> </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Score: <%= array["totalVotesScore"] %> </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @memes["result"].each do |array| %>
+      <td> Votes: <%= array["entityVotesSummary"]["totalVotesSum"] %> </td>
+    <% end %>
+  </tr>
+
+</table>
