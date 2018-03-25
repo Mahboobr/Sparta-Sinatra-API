@@ -17,8 +17,9 @@
             "entityName"=>"Generator",
             "entityID"=>2, "totalVotesSum"=>11467,
             "userID"=>-2060515646,
-            "userVoteScore"=>0},
-            "imageUrl"=>"https://memegenerator.net/img/images/400x/166088.jpg"
+            "userVoteScore"=>0
+          },
+        "imageUrl"=>"https://memegenerator.net/img/images/400x/166088.jpg"
       },
       {
         "generatorID"=>542616,
