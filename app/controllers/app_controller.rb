@@ -1,3 +1,4 @@
+
 class AppController < Sinatra::Base
 
   # sets root of the parent directory of the current file
@@ -11,31 +12,18 @@ class AppController < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  $posts = [
-    {
-    id: 0,
-    title: "Post 1",
-    body: "This is the first post"
-    },
-    {
-    id: 1,
-    title: "Post 2",
-    body: "This is the second post"
-    },
-    {
-    id: 20,
-    title: "Post 3",
-    body: "This is the third post"
-    }
-  ]
+
 
   # Landing Page
   get '/' do
     @title = "Posts Show Page"
 
+    $posts = MemeAPI.new.meme_service.json_response
+
     @posts = $posts
 
     erb :'/index'
   end
+
 
 end
