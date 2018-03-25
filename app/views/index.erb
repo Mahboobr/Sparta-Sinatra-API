@@ -1,0 +1,7 @@
+<h1>Welcome to the Posts Index Page</h1>
+
+<% @posts.each do |post| %>
+<div class="">
+  <a href="/posts/<%= post[:id] %>">See More <%= post[:id] %></a>
+</div>
+<% end %>
